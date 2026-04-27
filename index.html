@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPRYA TEAM - Каталог</title>
+    <style>
+        body { font-family: sans-serif; background: #0f0f0f; color: white; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        h1 { color: #e63946; text-transform: uppercase; border-bottom: 3px solid #e63946; padding-bottom: 10px; margin-bottom: 30px; text-align: center; }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1200px; }
+        .card { background: #1a1a1a; border-radius: 15px; width: 280px; overflow: hidden; border: 1px solid #333; transition: 0.3s; }
+        .card:hover { border-color: #e63946; transform: translateY(-5px); }
+        .card img { width: 100%; height: 280px; object-fit: cover; cursor: pointer; }
+        .info { padding: 15px; text-align: center; }
+        .info h2 { font-size: 1.1rem; margin: 0; color: #e63946; }
+        .info p { font-size: 0.8rem; color: #888; margin: 10px 0; }
+        .buy-btn { display: inline-block; background: #e63946; color: white; text-decoration: none; padding: 8px 20px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+        .contacts { margin-top: 50px; padding: 20px; background: #1a1a1a; border-radius: 20px; border: 1px solid #e63946; text-align: center; }
+        .contact-link { display: block; color: white; text-decoration: none; margin: 10px 0; font-weight: bold; }
+        #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; }
+        #modal img { max-width: 90%; max-height: 90%; border: 2px solid #e63946; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Атрибутика OPRYA TEAM</h1>
+    <div class="gallery">
+        <div class="card"><img src="1.jpg" onclick="openImg('1.jpg')"><div class="info"><h2>Подставка Кимоно</h2><a href="https://t.me" class="buy-btn">Заказать</a></div></div>
+        <div class="card"><img src="2.jpg" onclick="openImg('2.jpg')"><div class="info"><h2>Брелок Кёкусинкай</h2><a href="https://t.me" class="buy-btn">Заказать</a></div></div>
+        <div class="card"><img src="3.jpg" onclick="openImg('3.jpg')"><div class="info"><h2>Брелок Кимоно</h2><a href="https://t.me" class="buy-btn">Заказать</a></div></div>
+        <div class="card"><img src="4.jpg" onclick="openImg('4.jpg')"><div class="info"><h2>Цветные пояса</h2><a href="https://t.me" class="buy-btn">Заказать</a></div></div>
+        <div class="card"><img src="5.jpg" onclick="openImg('5.jpg')"><div class="info"><h2>OPRYA TEAM</h2><a href="https://t.me" class="buy-btn">Заказать</a></div></div>
+    </div>
+    <div class="contacts">
+        <h3>Связаться с нами</h3>
+        <a class="contact-link" href="tel:+79217758581">📞 +7 (921) 775-85-81</a>
+        <a class="contact-link" href="https://t.me">✈️ Telegram: @gh1_st</a>
+    </div>
+    <div id="modal" onclick="this.style.display='none'"><img id="m-img" src=""></div>
+    <script>function openImg(s){document.getElementById('m-img').src=s;document.getElementById('modal').style.display='flex';}</script>
+</body>
+</html>
