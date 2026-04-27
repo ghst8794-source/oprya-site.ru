@@ -15,27 +15,27 @@
         .info h2 { font-size: 1.1rem; margin: 0; color: #e63946; }
         .price { font-size: 1.3rem; font-weight: bold; color: #ffffff; margin-top: 10px; display: block; }
         
-        .contacts { margin-top: 50px; padding: 25px; background: #1a1a1a; border-radius: 20px; width: 100%; max-width: 450px; text-align: center; border: 1px solid #e63946; box-sizing: border-box; }
-        .contacts h3 { margin: 0 0 15px 0; color: #e63946; text-transform: uppercase; }
+        /* Блок контактов без лишних заголовков */
+        .contacts { margin-top: 50px; padding: 20px; background: #1a1a1a; border-radius: 20px; width: 100%; max-width: 400px; text-align: center; border: 1px solid #e63946; box-sizing: border-box; }
         .contact-link { display: block; color: white; text-decoration: none; margin: 10px 0; font-size: 1.2rem; font-weight: bold; transition: 0.2s; }
         .contact-link:hover { color: #e63946; }
 
-        #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; }
+        #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; cursor: zoom-out; }
         #modal img { max-width: 90%; max-height: 90%; border: 2px solid #e63946; border-radius: 10px; }
     </style>
 </head>
 <body>
     <h1>Атрибутика OPRYA TEAM</h1>
+
     <div class="gallery">
         <div class="card" onclick="openImg('1.jpg')"><img src="1.jpg"><div class="info"><h2>Подставка Кимоно</h2><span class="price">650р</span></div></div>
         <div class="card" onclick="openImg('2.jpg')"><img src="2.jpg"><div class="info"><h2>Брелок Кёкусинкай</h2><span class="price">120р</span></div></div>
         <div class="card" onclick="openImg('3.jpg')"><img src="3.jpg"><div class="info"><h2>Брелок Кимоно</h2><span class="price">140р</span></div></div>
         <div class="card" onclick="openImg('4.jpg')"><img src="4.jpg"><div class="info"><h2>Цветные пояса</h2><span class="price">100р</span></div></div>
-        <div class="card" onclick="openImg('5.jpg')"><img src="5.jpg"><div class="info"><h2>OPRYA TEAM</h2><span class="price">Под заказ</span></div></div>
+        <div class="card" onclick="openImg('5.jpg')"><img src="5.jpg"><div class="info"><h2>OPRYA TEAM</h2><span class="price">250р</span></div></div>
     </div>
 
     <div class="contacts">
-        <h3>Для заказа:</h3>
         <a class="contact-link" href="tel:+79217758581">📞 +7 (921) 775-85-81</a>
         <a class="contact-link" href="https://t.me">✈️ Telegram: @gh1_st</a>
     </div>
