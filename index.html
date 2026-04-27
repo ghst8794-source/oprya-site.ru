@@ -44,5 +44,44 @@
     </div>
     <div id="modal" onclick="this.style.display='none'"><img id="m-img" src=""></div>
     <script>function openImg(s){document.getElementById('m-img').src=s;document.getElementById('modal').style.display='flex';}</script>
+    <!-- Начало блока счетчика -->
+<footer style="text-align: center; margin-top: 50px; padding: 20px; font-family: sans-serif;">
+    <p>Просмотров страницы:</p>
+    <div id="visit-counter" style="font-size: 20px; font-weight: bold; color: #007bff;">
+        Загрузка...
+    </div>
+</footer>
+
+<script>
+async function updateCounter() {
+    const counterElement = document.getElementById('visit-counter');
+    // Уникальный ID для вашего сайта (можно заменить на любое слово)
+    const siteID = "oprya-site-ru-unique-stats"; 
+    
+    // Проверяем, заходил ли пользователь
+    const hasVisited = localStorage.getItem('site_visited');
+    
+    // URL для HITS API (incr - увеличить, get - просто показать)
+    const mode = hasVisited ? 'get' : 'incr';
+    const url = `https://countapi.xyz{mode}/ghst8794/${siteID}`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        counterElement.innerText = data.value;
+        
+        // Помечаем пользователя как "бывшего на сайте"
+        if (!hasVisited) {
+            localStorage.setItem('site_visited', 'true');
+        }
+    } catch (error) {
+        // Если сервис недоступен, ставим заглушку или скрываем
+        counterElement.innerText = "1"; 
+    }
+}
+
+updateCounter();
+</script>
+<!-- Конец блока счетчика -->
 </body>
 </html>
