@@ -15,22 +15,22 @@
         .info h2 { font-size: 1.1rem; margin: 0; color: #e63946; }
         .price { font-size: 1.3rem; font-weight: bold; color: #ffffff; margin-top: 10px; display: block; }
         
-        /* Блок с важной информацией */
         .important-text { 
             max-width: 600px; 
             text-align: center; 
             margin-top: 40px; 
             padding: 20px; 
             background: #151515; 
-            border-left: 4px solid #e63946; 
+            border-top: 2px solid #e63946; 
             line-height: 1.6; 
             color: #ccc;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
-        .important-text b { color: #fff; }
+        .important-text b { color: #fff; display: block; margin: 10px 0; font-size: 1.1rem; }
 
-        .contacts { margin-top: 30px; padding: 20px; background: #1a1a1a; border-radius: 20px; width: 100%; max-width: 400px; text-align: center; border: 1px solid #e63946; box-sizing: border-box; }
-        .contact-link { display: block; color: white; text-decoration: none; margin: 10px 0; font-size: 1.2rem; font-weight: bold; transition: 0.2s; }
+        .contacts { margin-top: 30px; padding: 20px; background: #1a1a1a; border-radius: 20px; width: 100%; max-width: 450px; text-align: center; border: 1px solid #e63946; box-sizing: border-box; }
+        .order-text { font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; color: #fff; }
+        .contact-link { display: inline-block; color: white; text-decoration: none; font-size: 1.2rem; font-weight: bold; transition: 0.2s; }
         .contact-link:hover { color: #e63946; }
 
         #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; cursor: zoom-out; }
@@ -48,16 +48,16 @@
         <div class="card" onclick="openImg('5.jpg')"><img src="5.jpg"><div class="info"><h2>OPRYA TEAM</h2><span class="price">250р</span></div></div>
     </div>
 
-    <!-- Текст, который вы просили -->
     <div class="important-text">
-        <p>Изготавливается под заказ. Цвет пояса — на Ваш выбор.</p>
-        <p><b>20% от изделия пойдут на развитие клуба OPRYA TEAM.</b></p>
+        <p>Изделия изготавливаются вручную. Изготавливается под заказ. Цвет пояса — на Ваш выбор.</p>
+        <b>20% от изделия пойдут на развитие клуба OPRYA TEAM.</b>
         <p>Следите за обновлениями: коллекция изделий будет пополняться по мере творческого вдохновения.</p>
     </div>
 
     <div class="contacts">
-        <a class="contact-link" href="tel:+79217758581">📞 +7 (921) 775-85-81</a>
-        <a class="contact-link" href="https://t.me">✈️ Telegram: @gh1_st</a>
+        <div class="order-text">Заказ через тренера или 
+            <a class="contact-link" href="https://t.me">✈️ Telegram: @gh1_st</a>
+        </div>
     </div>
 
     <div id="modal" onclick="this.style.display='none'"><img id="m-img" src=""></div>
