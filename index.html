@@ -14,52 +14,34 @@
         .info { padding: 15px; text-align: center; }
         .info h2 { font-size: 1.1rem; margin: 0; color: #e63946; }
         .price { font-size: 1.3rem; font-weight: bold; color: #ffffff; margin-top: 10px; display: block; }
-        
-        .important-text { 
-            max-width: 600px; 
-            text-align: center; 
-            margin-top: 40px; 
-            padding: 20px; 
-            background: #151515; 
-            border-top: 2px solid #e63946; 
-            line-height: 1.6; 
-            color: #ccc;
-            font-size: 1rem;
-        }
+        .important-text { max-width: 600px; text-align: center; margin-top: 40px; padding: 20px; background: #151515; border-top: 2px solid #e63946; line-height: 1.6; color: #ccc; font-size: 1rem; }
         .important-text b { color: #fff; display: block; margin: 10px 0; font-size: 1.1rem; }
-
         .contacts { margin-top: 30px; padding: 20px; background: #1a1a1a; border-radius: 20px; width: 100%; max-width: 500px; text-align: center; border: 1px solid #e63946; box-sizing: border-box; }
         .order-text { font-size: 1.2rem; font-weight: bold; color: #fff; line-height: 1.4; }
         .contact-link { color: white; text-decoration: none; transition: 0.2s; white-space: nowrap; }
         .contact-link:hover { color: #e63946; }
-
         #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; cursor: zoom-out; }
         #modal img { max-width: 90%; max-height: 90%; border: 2px solid #e63946; border-radius: 10px; }
     </style>
 </head>
 <body>
     <h1>Атрибутика OPRYA TEAM</h1>
-
     <div class="gallery">
         <div class="card" onclick="openImg('1.jpg')"><img src="1.jpg"><div class="info"><h2>Подставка Кимоно</h2><span class="price">650р</span></div></div>
         <div class="card" onclick="openImg('2.jpg')"><img src="2.jpg"><div class="info"><h2>Брелок Кёкусинкай</h2><span class="price">120р</span></div></div>
         <div class="card" onclick="openImg('3.jpg')"><img src="3.jpg"><div class="info"><h2>Брелок Кимоно</h2><span class="price">140р</span></div></div>
         <div class="card" onclick="openImg('4.jpg')"><img src="4.jpg"><div class="info"><h2>Цветные пояса</h2><span class="price">100р</span></div></div>
         <div class="card" onclick="openImg('5.jpg')"><img src="5.jpg"><div class="info"><h2>OPRYA TEAM</h2><span class="price">250р</span></div></div>
+        <div class="card" onclick="openImg('6.jpg')"><img src="6.jpg"><div class="info"><h2>OPRYA TEAM ученики</h2><span class="price">250р</span></div></div>
     </div>
-
     <div class="important-text">
         <p>Изделия изготавливаются под заказ. Цвет пояса — на Ваш выбор.</p>
         <b>20% от изделия пойдут на развитие клуба OPRYA TEAM.</b>
         <p>Следите за обновлениями: коллекция изделий будет пополняться по мере творческого вдохновения.</p>
     </div>
-
     <div class="contacts">
-        <div class="order-text">Заказ через тренера или 
-            <a class="contact-link" href="https://t.me">✈️ Telegram: @gh1_st</a>
-        </div>
+        <div class="order-text">Заказ через тренера или <a class="contact-link" href="https://t.me">✈️ Telegram: @gh1_st</a></div>
     </div>
-
     <div id="modal" onclick="this.style.display='none'"><img id="m-img" src=""></div>
     <script>function openImg(s){document.getElementById('m-img').src=s;document.getElementById('modal').style.display='flex';}</script>
 </body>
